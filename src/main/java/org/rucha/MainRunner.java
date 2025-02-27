@@ -17,7 +17,7 @@ public class MainRunner {
                 List<Employee> empList = InputCsvEmployeeMapper.readFile(inputFile);
                 EmployeeService empService = new EmployeeService();
                 List<Employee> mgrList = empService.getAllManagersExceptCEO(empList);
-                OptionalDouble optionalSal = empService.getAverageManagerSalary(empList);
+                OptionalDouble optionalSal = empService.getAverageManagerSalary(mgrList);
 
                 if (optionalSal.isPresent()) {
                     double avgSalary=optionalSal.getAsDouble();

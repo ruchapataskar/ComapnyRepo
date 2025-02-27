@@ -43,7 +43,8 @@ public class EmployeeServiceTests {
     @Test
     public void testAvgSalaryCalculation() {
         double avgSalary=47500.0;
-        Assert.assertEquals(avgSalary, employeeService.getAverageManagerSalary(empList).getAsDouble());
+        List<Employee> managers=employeeService.getAllManagersExceptCEO(empList);
+        Assert.assertEquals(avgSalary, employeeService.getAverageManagerSalary(managers).getAsDouble());
     }
 
     @Test

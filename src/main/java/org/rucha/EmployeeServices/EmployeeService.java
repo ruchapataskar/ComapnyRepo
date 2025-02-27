@@ -32,8 +32,7 @@ public class EmployeeService {
         return empMap;
     }
 
-    public OptionalDouble getAverageManagerSalary(List<Employee> empList){
-        ArrayList<Employee> managers= (ArrayList<Employee>)getAllManagersExceptCEO(empList);
+    public OptionalDouble getAverageManagerSalary(List<Employee> managers){
         return managers.stream().mapToDouble(Employee::getSalary).average();
     }
 
