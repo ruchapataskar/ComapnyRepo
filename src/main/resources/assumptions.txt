@@ -1,0 +1,5 @@
+1- CEO is a manager
+2- excluding CEO , calculate avergae salary of all managers.
+3- manager earning less than this avg salary is earning less.
+4- manager earning more than this avg salary is earning more.
+
